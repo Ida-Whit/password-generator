@@ -5,8 +5,6 @@ const lower = "abcdefghijklmnopqrstuvwxyz"
 
 let select = []
 
-
-
 const generateBtn = document.querySelector("#generate");   // Assignment Code  // linked to the button on webpage
 
 generateBtn.addEventListener("click", writePassword);  // Add event listener to generate button  // makes it so that when you click the button, it will execute the writePassword function.
@@ -30,18 +28,17 @@ function writePassword() {
   if (userChar) { 
     select.push(characters)
   }
-  
-  for (let i=0; i<userAmount.length; i++) {
-    
-  };
+
+  function generatePassword(){
+    for (let i=0; i<userAmount.length; i++) {
+      Math.floor(Math.random() * select.length)
+    };
+  }
+
+
+
   const password = generatePassword()
   const passwordText = document.querySelector("#password");  // passwordText linked to text area on webpage
 
   passwordText.value = password; // links the passwordText (linked to the text area on the webpage) with the password that will be generated once the code is entered.
 }
-
-
-
-
-
-
